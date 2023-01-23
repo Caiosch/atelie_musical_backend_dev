@@ -13,7 +13,7 @@ interface MusicListItemProps {
 }
 
 const MusicListItem: React.FC<MusicListItemProps> = ({ music }) => {
-  const { findOcasion } = useSettingsQuery();
+  const { findOccasion } = useSettingsQuery();
 
   return (
     <Col gap={3}>
@@ -39,8 +39,8 @@ const MusicListItem: React.FC<MusicListItemProps> = ({ music }) => {
           fontStyle={"italic"}
           color={"primary.500"}
         >
-          {music.ocasion
-            ? findOcasion(music.ocasion)?.value ?? "Não definido"
+          {music.occasion
+            ? findOccasion(music.occasion)?.value ?? "Não definido"
             : "Não definido"}
         </Heading>
       </Row>

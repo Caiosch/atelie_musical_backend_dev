@@ -249,7 +249,7 @@ const ShowRequestMusicAdminPage: React.FC = () => {
                       },
                       {
                         label: "Ocasião",
-                        value: requestMusic.data.ocasions,
+                        value: requestMusic.data.occasions,
                       },
 
                       { label: "Proposta", value: requestMusic.data.about },

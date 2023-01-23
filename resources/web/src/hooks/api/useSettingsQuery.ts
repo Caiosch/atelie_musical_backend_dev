@@ -6,7 +6,7 @@ export function useSettingsQuery() {
     return apiClient.getSettings().then((res) => res.body);
   });
 
-  const ocasions = query.data?.data?.tags?.filter((t) => t.type === "ocasion");
+  const occasions = query.data?.data?.tags?.filter((t) => t.type === "occasion");
   const projects = query.data?.data?.tags?.filter((t) => t.type === "project");
   const sentiments = query.data?.data?.tags?.filter(
     (t) => t.type === "sentiment"
@@ -15,8 +15,8 @@ export function useSettingsQuery() {
     (t) => t.type === "musicalStyle"
   );
 
-  const findOcasion = (name: string) => {
-    return ocasions?.find((o) => o.key === name);
+  const findOccasion = (name: string) => {
+    return occasions?.find((o) => o.key === name);
   };
 
   const filterSentiments = (names: string[]) => {
@@ -27,11 +27,11 @@ export function useSettingsQuery() {
 
   return {
     ...query,
-    ocasions,
+    occasions,
     projects,
     sentiments,
     musicalStyles,
-    findOcasion,
+    findOccasion,
     filterSentiments,
   };
 }

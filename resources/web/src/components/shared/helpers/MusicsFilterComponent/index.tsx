@@ -10,16 +10,16 @@ const MusicsFilterComponent: React.FC<
   MusicFilter & { isInverted?: boolean }
 > = ({
   musicVoicesFilter,
-  musicalOcasionsFilter,
+  musicalOccasionsFilter,
   musicalStylesFilter,
   pagination,
   query,
   setMusicVoices,
-  setMusicalOcasions,
+  setMusicalOccasions,
   setMusicalStyles,
   isInverted,
   musicalStyles,
-  ocasions,
+  occasions,
 }) => {
   return (
     <>
@@ -41,12 +41,12 @@ const MusicsFilterComponent: React.FC<
           <Box maxW={"100%"}>
             <BadgeSelect
               isInverted={isInverted}
-              items={ocasions.map((style) => ({
+              items={occasions.map((style) => ({
                 label: style.value,
                 value: style.key,
               }))}
-              value={musicalOcasionsFilter}
-              onChange={setMusicalOcasions}
+              value={musicalOccasionsFilter}
+              onChange={setMusicalOccasions}
             />
           </Box>
         </CollapseCard>

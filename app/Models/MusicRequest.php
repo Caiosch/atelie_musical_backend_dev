@@ -52,7 +52,7 @@ class MusicRequest extends Model
             'visualizer_file' => 'admin.visualizerFile',
             'visualizer_youtube' => 'admin.visualizerYoutube',
             'artist_record_file' => 'admin.artistRecordFile',
-            'ocasion' => 'ocasions',
+            'occasion' => 'occasions',
             'sentiments' => 'sentiments',
             'song_type' => 'songType',
         ];

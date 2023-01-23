@@ -30,7 +30,7 @@ class CreateMusicController extends Controller
             'aboutShort' => ['required', 'string'],
             'about' => ['nullable', 'string'],
             'aboutRecorded' => ['nullable'],
-            'ocasions' => ['required', 'string'],
+            'occasions' => ['required', 'string'],
             'sentiments' => ['nullable', 'array'],
             'artistId' => ['nullable', 'integer'],
             'choiceArtist' => ['boolean'],

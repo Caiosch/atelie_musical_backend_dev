@@ -13,7 +13,7 @@ import RequestMusicFinishRequest from "../RequestMusicFinishRequest";
 
 const RequestMusicNormal: React.FC = () => {
   const { sentiments } = useSettingsQuery();
-  const { requestMusicForm, BadgeOptions, isOcasion, requestMusicFormData } =
+  const { requestMusicForm, BadgeOptions, isOccasion, requestMusicFormData } =
     useMusicRequestSubmit();
 
   return (
@@ -29,7 +29,7 @@ const RequestMusicNormal: React.FC = () => {
                 placeholder={"Ex: Minha chefe, Mariana"}
               />
             </FieldWrap>
-            <Collapse in={!isOcasion("casamento")}>
+            <Collapse in={!isOccasion("casamento")}>
               <FieldWrap
                 label="Como você quer que o presenteado sinta essa canção?"
                 description={["Você pode escolher até 2"]}

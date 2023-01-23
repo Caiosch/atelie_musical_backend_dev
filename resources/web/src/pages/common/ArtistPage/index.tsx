@@ -27,7 +27,7 @@ import { Link, useParams } from "react-router-dom";
 const ArtistPage: React.FC = () => {
   const { artistId } = useParams();
   const { data: artist } = useArtistQuery(artistId!);
-  const { findOcasion, filterSentiments } = useSettingsQuery();
+  const { findOccasion, filterSentiments } = useSettingsQuery();
 
   const gridOptions = useBreakpointValue([
     {
@@ -187,7 +187,7 @@ const ArtistPage: React.FC = () => {
                       music.data.admin?.musicName ?? "Sem Nome"
                     }`}
                     category={
-                      findOcasion(music.data?.ocasions)?.value || undefined
+                      findOccasion(music.data?.occasions)?.value || undefined
                     }
                     genres={filterSentiments(music.data?.sentiments || []).map(
                       (s) => s.value

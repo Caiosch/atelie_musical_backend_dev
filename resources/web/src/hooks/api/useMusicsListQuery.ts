@@ -10,7 +10,7 @@ export function useMusicsListQuery(limit = 100000, filter: any = {}) {
   const {
     musicalStyles = [],
     sentiments = [],
-    ocasions = [],
+    occasions = [],
   } = useSettingsQuery();
   const pagination = usePagination(1, 1);
   const query = useQuery(
@@ -31,23 +31,23 @@ export function useMusicsListQuery(limit = 100000, filter: any = {}) {
   );
 
   const [musicalStylesFilter, setMusicalStyles] = useState<any[]>([]);
-  const [musicalOcasionsFilter, setMusicalOcasions] = useState<any[]>([]);
+  const [musicalOccasionsFilter, setMusicalOccasions] = useState<any[]>([]);
   const [musicVoicesFilter, setMusicVoices] = useState<any[]>([]);
 
   const nextMusics = useMemo(() => {
     let nextMusics = query.data?.data ? [...query.data?.data] : [];
 
     if (
-      musicalOcasionsFilter.length <= 0 &&
+      musicalOccasionsFilter.length <= 0 &&
       musicalStylesFilter.length <= 0 &&
       musicVoicesFilter.length <= 0
     ) {
       return nextMusics;
     }
 
-    if (musicalOcasionsFilter.length > 0) {
+    if (musicalOccasionsFilter.length > 0) {
       nextMusics = nextMusics.filter((music) => {
-        return !!musicalOcasionsFilter.includes(music.ocasion);
+        return !!musicalOccasionsFilter.includes(music.occasion);
       });
     }
 
@@ -69,8 +69,8 @@ export function useMusicsListQuery(limit = 100000, filter: any = {}) {
   }, [
     musicalStylesFilter,
     musicalStyles,
-    ocasions,
-    musicalOcasionsFilter,
+    occasions,
+    musicalOccasionsFilter,
     query,
   ]);
 
@@ -79,13 +79,13 @@ export function useMusicsListQuery(limit = 100000, filter: any = {}) {
     pagination,
     musicalStylesFilter,
     musicVoicesFilter,
-    musicalOcasionsFilter,
+    musicalOccasionsFilter,
     musicalStyles,
     sentiments,
-    ocasions,
+    occasions,
     nextMusics,
     setMusicalStyles,
-    setMusicalOcasions,
+    setMusicalOccasions,
     setMusicVoices,
   };
 }

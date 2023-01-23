@@ -12,8 +12,8 @@ import { useMusicRequestSubmit } from "./hooks/useMusicRequestSubmit";
 import RequestMusicNormal from "./src/RequestMusicNormal";
 
 const RequestMusicPageForm: React.FC = () => {
-  const { ocasions } = useSettingsQuery();
-  const { isOcasion, BadgeOptions, requestMusicForm } = useMusicRequestSubmit();
+  const { occasions } = useSettingsQuery();
+  const { isOccasion, BadgeOptions, requestMusicForm } = useMusicRequestSubmit();
 
   return (
     <>
@@ -51,8 +51,8 @@ const RequestMusicPageForm: React.FC = () => {
             </FieldWrap>
             <FieldWrap label="Qual é a ocasião?">
               {BadgeOptions(
-                ocasions?.map(AppTagMapper.toBadgeOptions) || [],
-                "ocasions",
+                occasions?.map(AppTagMapper.toBadgeOptions) || [],
+                "occasions",
                 false,
                 false
               )}
@@ -60,9 +60,9 @@ const RequestMusicPageForm: React.FC = () => {
           </SimpleGrid>
         </Content>
       </Col>
-      {isOcasion("corporativo") && <RequestMusicCorporativo />}
-      {isOcasion("casamento") && <RequestMusicCasamento />}
-      {!isOcasion("casamento", "corporativo") && <RequestMusicNormal />}
+      {isOccasion("corporativo") && <RequestMusicCorporativo />}
+      {isOccasion("casamento") && <RequestMusicCasamento />}
+      {!isOccasion("casamento", "corporativo") && <RequestMusicNormal />}
     </>
   );
 };

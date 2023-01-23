@@ -14,8 +14,8 @@ export function useMusicRequestSubmit() {
   const navigate = useNavigate();
   const { isAuth } = useAuth();
 
-  const isOcasion = (...ocasions: string[]) => {
-    return ocasions.includes(requestMusicFormData.data?.ocasions || "");
+  const isOccasion = (...occasions: string[]) => {
+    return occasions.includes(requestMusicFormData.data?.occasions || "");
   };
 
   const onSubmit = () => {
@@ -72,6 +72,6 @@ export function useMusicRequestSubmit() {
     isLoading,
     onSubmit,
     BadgeOptions,
-    isOcasion,
+    isOccasion,
   };
 }

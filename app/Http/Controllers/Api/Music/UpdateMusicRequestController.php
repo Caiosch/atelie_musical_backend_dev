@@ -29,7 +29,7 @@ class UpdateMusicRequestController extends Controller
             'giftedName' => ['nullable', 'string', 'max:255'],
             'aboutShort' => ['nullable', 'string'],
             'about' => ['nullable', 'string'],
-            'ocasions' => ['nullable', 'string'],
+            'occasions' => ['nullable', 'string'],
             'artistId' => ['nullable', 'integer'],
             'choiceArtist' => ['nullable', 'boolean'],
             'duration' => ['nullable', Rule::in(['1min', '3min'])],

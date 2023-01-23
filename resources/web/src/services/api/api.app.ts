@@ -327,7 +327,7 @@ export namespace ApiApp {
       visualizer_youtube: string;
       artist_record_file: FormMedia;
       artist: ApiApp.Entities.Artist;
-      ocasion: string;
+      occasion: string;
       is_main: boolean;
     }
 

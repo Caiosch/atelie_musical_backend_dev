@@ -17,18 +17,18 @@ class AppTagsSeeder extends Seeder
     public function run()
     {
         $items = [
-            // Ocasion
-            ['maes-e-pais', 'Mães e Pais', 'ocasion'],
-            ['familia', 'Família', 'ocasion'],
-            ['kids', 'Kids', 'ocasion'],
-            ['infantil', 'Infantil', 'ocasion'],
-            ['pra-ele', 'Pra Ele', 'ocasion'],
-            ['pro-casal', 'Pro Casal', 'ocasion'],
-            ['amizade', 'Amizade', 'ocasion'],
-            ['corporativo', 'Corporativo', 'ocasion'],
-            ['especiais', 'Especiais', 'ocasion'],
-            ['casamento', 'Casamento', 'ocasion'],
-            ['outros', 'Outros', 'ocasion'],
+            // Occasion
+            ['maes-e-pais', 'Mães e Pais', 'occasion'],
+            ['familia', 'Família', 'occasion'],
+            ['kids', 'Kids', 'occasion'],
+            ['infantil', 'Infantil', 'occasion'],
+            ['pra-ele', 'Pra Ele', 'occasion'],
+            ['pro-casal', 'Pro Casal', 'occasion'],
+            ['amizade', 'Amizade', 'occasion'],
+            ['corporativo', 'Corporativo', 'occasion'],
+            ['especiais', 'Especiais', 'occasion'],
+            ['casamento', 'Casamento', 'occasion'],
+            ['outros', 'Outros', 'occasion'],
             // Projects
             ['campanha-publicitaria', 'Campanha Publicitária', 'project'],
             ['comemoracao-interna', 'Comemoração Interna', 'project'],
