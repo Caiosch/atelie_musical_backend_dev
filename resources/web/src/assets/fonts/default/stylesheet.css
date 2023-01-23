@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Benzin';
+    src: url('Benzin-Semibold.woff2') format('woff2'),
+        url('Benzin-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-BoldItalic.woff2') format('woff2'),
+        url('NeutrafaceText-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-Bold.woff2') format('woff2'),
+        url('NeutrafaceText-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-BookItalic.woff2') format('woff2'),
+        url('NeutrafaceText-BookItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-Book.woff2') format('woff2'),
+        url('NeutrafaceText-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-DemiItalic.woff2') format('woff2'),
+        url('NeutrafaceText-DemiItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-Demi.woff2') format('woff2'),
+        url('NeutrafaceText-Demi.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-LightItalic.woff2') format('woff2'),
+        url('NeutrafaceText-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neutraface Text';
+    src: url('NeutrafaceText-Light.woff2') format('woff2'),
+        url('NeutrafaceText-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

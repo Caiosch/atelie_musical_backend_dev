@@ -1,0 +1,80 @@
+version: '3'
+
+services:
+  laravel:
+    build: .
+    image: php8.0-fpm
+    container_name: meubemquere-laravel
+    restart: unless-stopped
+    command: bash -c "chmod +x /var/www/docker/php/setup.sh && chmod -R 777 /var/www/storage && /var/www/docker/php/setup.sh"
+    environment:
+      - APP_NAME=Meu BemQuerê
+      - APP_ENV=production
+      - APP_KEY=base64:L05tqKetmm4soiUiEYbJvVmcjZfXbdwHL4EzOVhrs2k=
+      - DB_CONNECTION=pgsql
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_DATABASE=dbname
+      - DB_USERNAME=dbuser
+      - DB_PASSWORD=dbpass
+      - APP_URL=http://localhost
+      - PAYPAL_MODE=sandbox
+      - PAYPAL_SANDBOX_CLIENT_ID=AT41buFw_DNJBDhsTrBF2KpXCAouQPNfMew477aHTXx9lDKbH6wLoWK2mbiisDZfDw7TQnDeVNujSOCP
+      - PAYPAL_SANDBOX_CLIENT_SECRET=EBS-MY7WC0OZrn91CGl1NW0_lpBuviimbDeYCd-k-rdgfCx9PIzg8Twmwj-inN1bzNktuWmp9dWmu5YC
+      - PAYPAL_LIVE_CLIENT_ID=
+      - PAYPAL_LIVE_CLIENT_SECRET=
+      - PAYPAL_CURRENCY=BRL
+      - PAYPAL_LOCALE=pt_BR
+      - MAIL_MAILER=smtp
+      - MAIL_HOST=smtp.mailtrap.io
+      - MAIL_PORT=2525
+      - MAIL_USERNAME=3d896456ab3b45
+      - MAIL_PASSWORD=98627e5bcfdbea
+      - MAIL_ENCRYPTION=tls
+    volumes:
+      - ./:/var/www
+      - ./docker/php/php.ini:/usr/local/etc/php/conf.d/meubemquere.ini
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+    networks:
+      - app-backend
+
+  nginx:
+    container_name: meubemquere-nginx
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "8989:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/server/:/etc/nginx/conf.d/
+    networks:
+      - app-backend
+
+  db:
+    container_name: meubemquere-db
+    image: 'postgres:14'
+    restart: always
+    environment:
+      - PGUSER=root
+      - POSTGRES_USER=dbuser
+      - POSTGRES_PASSWORD=dbpass
+      - POSTGRES_DB=dbname
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - .docker/db:/var/lib/postgresql/data:rw
+    ports:
+      - 6632:5432
+    healthcheck:
+      test: [ 'CMD-SHELL', 'pg_isready' ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - app-backend
+
+networks:
+  app-backend:
+    driver: bridge
