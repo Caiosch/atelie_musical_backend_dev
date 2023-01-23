@@ -31,7 +31,7 @@ class User extends Authenticatable
         // 'address_country',
         // 'address_state',
         // 'address_city',
-        // 'address_place',
+        // 'address_street',
         // 'address_complement',
     ];
 

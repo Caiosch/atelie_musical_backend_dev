@@ -35,7 +35,7 @@ class UpdateUserController extends Controller
             'address_country' => ['nullable', 'string'],
             'address_state' => ['nullable', 'string'],
             'address_city' => ['nullable', 'string'],
-            'address_place' => ['nullable', 'string'],
+            'address_street' => ['nullable', 'string'],
             'address_complement' => ['nullable', 'string'],
         ]);
 

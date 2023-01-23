@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('address_country')->nullable();
             $table->string('address_state')->nullable();
             $table->string('address_city')->nullable();
-            $table->string('address_place')->nullable();
+            $table->string('address_street')->nullable();
             $table->string('address_complement')->nullable();
             $table->rememberToken();
             $table->timestamps();

@@ -194,9 +194,9 @@ const HomeUserPage: React.FC = () => {
                 <FieldWrap label={"Endereço"} isInverted>
                   <Input
                     {...getInputTextProps("inverted")}
-                    value={profileFormData.data?.address_place}
+                    value={profileFormData.data?.address_street}
                     placeholder={"Endereço"}
-                    {...profileForm.register("data.address_place")}
+                    {...profileForm.register("data.address_street")}
                   />
                 </FieldWrap>
                 <FieldWrap label={"Complemento"} isInverted>
